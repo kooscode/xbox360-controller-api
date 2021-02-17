@@ -1,0 +1,3 @@
+#ignore output folder
+.vscode
+bin/*
