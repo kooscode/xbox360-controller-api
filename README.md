@@ -47,7 +47,7 @@ Using the API:
 
   `bool GetWaitControllerState(ControllerIndex, &ControllerState, TimeoutMS)`
   - This function will wait for a change received from the controller and then provide latest controller state upon change.
-  - You can supply a Timeout value in milliseconds to wait for a controller change, if no change was detected, current values will be returned.
+  - You can supply a Timeout value in milliseconds to wait for a controller change, if no change was detected, the function will return false and current values will be returned in the referenced controller state object.
 
 ### **NOTES
 - This API utilizes background running threads to constantly monitor all 4 controllers that might be connected to the Wireless receiver 
