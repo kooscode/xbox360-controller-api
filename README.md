@@ -22,6 +22,8 @@ Running The Example:
 - Build the sample app by excuting: `make`
 - Then run the sample app by executing: `sudo bin\controller-test` (see notes at the bottom)
 
+![controller-test](images/controller-test.png)
+
 Using the API:
 ---------------
 - Simply include `XBOX360.hpp` 
