@@ -5,8 +5,8 @@
 I needed to use a XBOX 360 Controller on an AI & Robotics project at home 
 and I did not want to be bound to Kernel level drivers or other external drivers.
 
-So, I decided to write a XBOX 360 Controller API that works with the wireless adapter
-and supports up to 4 controllers.
+So, I decided to write a XBOX 360 Controller API that works with directly with the 
+XBOX 360 USB wireless PC adapter hardware and supports up to 4 controllers.
 
 The second goal was to make this as cross platform as possible, so I ended up using libusb-1.0.0 
 which supposedly can run on Linux, Mac and Windows. Althought right now I only have
