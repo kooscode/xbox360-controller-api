@@ -18,9 +18,10 @@ The API is super easy to use and I include a sample app.
 
 Running The Example:
 --------------------
-- You *might* need to install required package: `libusb-1.0-0-dev` (It came pre-installed on my NVIDIA Jetson Nano)
+- clone ths repo `git clone https://github.com/kooscode/xbox360-controller-api.git`
 - Build the sample app by excuting: `make`
 - Then run the sample app by executing: `sudo bin\controller-test` (see notes at the bottom)
+- NOTE: You *might* need to install required package: `libusb-1.0-0-dev` (It came pre-installed on my NVIDIA Jetson Nano)
 
 ![controller-test](images/controller-test.png)
 
