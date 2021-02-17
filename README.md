@@ -1,5 +1,7 @@
 # XBOX360-CONTROLLER-API
 
+![TheRumbler](images/TheRumbler.jpg)
+
 I needed to use a XBOX 360 Controller on an AI & Robotics project at home 
 and I did not want to be bound to Kernel level drivers or other external drivers.
 
@@ -18,7 +20,7 @@ Running The Example:
 --------------------
 - You need to install required package: `libusb-1.0-0-dev` 
 - Build the sample app by excuting: `make`
-- Then run the sample app by executing: `bin\controller-test`
+- Then run the sample app by executing: `sudo bin\controller-test` (see notes at the bottom)
 
 Using the API:
 ---------------
@@ -45,11 +47,10 @@ Using the API:
   - This function will wait for a change received from the controller and then provide latest controller state upon change.
   - You can supply a Timeout value in milliseconds to wait for a controller change, if no change was detected, current values will be returned.
 
-### **NOTE
-This API utilizes background running threads to constantly monitor all 4 controllers that might be connected to the Wireless receiver 
+### **NOTES
+- This API utilizes background running threads to constantly monitor all 4 controllers that might be connected to the Wireless receiver 
 and you will get instantanous values from the controller when any changes occur.
-
-
+- At this time you need to run your apps using `sudo` because this API will detach any existing Kernel drivers holding onto the controllers and access the hardware directly.
 
 ### Credits
 Thanks to the `Xboxdrv` Linux User Space driver sources for hints as to the USB Report formats sent to the Wireless Controller. That helped a lot! (https://github.com/xboxdrv/xboxdrv)
