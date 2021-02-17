@@ -44,10 +44,13 @@ Using the API:
 
   `void GetControllerState(ControllerIndex, &ControllerState)`
   - Get the current Controller State, this will provide state for all Buttons, Triggers and Thumb Sticks.
+  - Look in the `XBOX360Defnines.h` file for the`CONTROLLER_STATE` struct that holds all controller state 
 
   `bool GetWaitControllerState(ControllerIndex, &ControllerState, TimeoutMS)`
   - This function will wait for a change received from the controller and then provide latest controller state upon change.
   - You can supply a Timeout value in milliseconds to wait for a controller change, if no change was detected, the function will return false and current values will be returned in the referenced controller state object.
+  - Look in the `XBOX360Defnines.h` file for the`CONTROLLER_STATE` struct that holds all controller state 
+
 
 ### **NOTES
 - This API utilizes background running threads to constantly monitor all 4 controllers that might be connected to the Wireless receiver 
