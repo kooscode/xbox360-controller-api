@@ -375,7 +375,7 @@ bool  XKCTRL::XBOX360::GetWaitControllerState(const int32_t ControllerIndex,  XK
 
   // wait for controller data changes notification to get latest changed values
   // if noting received after timout, return false and populate current stale values.
-  // wait for notify OR timeout then check condition.
+  // waits for condition_variable notify OR timeout.
   int32_t controlleridx = CONTROLLER_BOUNDS(ControllerIndex);
   auto notified = ControllersNotify_[controlleridx].wait_for(lock, std::chrono::milliseconds(TimeoutMS));
   ControllerState = ControllerStates_[controlleridx];
