@@ -18,7 +18,7 @@ The API is super easy to use and I include a sample app.
 
 Running The Example:
 --------------------
-- You need to install required package: `libusb-1.0-0-dev` 
+- You *might* need to install required package: `libusb-1.0-0-dev` (It came pre-installed on my NVIDIA Jetson Nano)
 - Build the sample app by excuting: `make`
 - Then run the sample app by executing: `sudo bin\controller-test` (see notes at the bottom)
 
